@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<title>Index</title>
+<script>
+   function crearDin(){
+      //aquí instanciamos al componente padre, creación y adición al hilo del tag input
+      var padre = document.getElementById("padre");
+      var input = document.createElement("input");         
+      input.type = 'text';
+
+      padre.appendChild(input);
+   }
+   /*Cargar los componentes al iniciar la web, referenciar el componente + del input y asignar el componente clic
+   para disparar la función de creación del input*/ 
+   window.onload = function(){
+      
+      var btnAdd = document.getElementById("btn_agregar");   
+      btnAdd.onclick = crearDin;
+   }      
+</script>
+</head>
+<body>
+<div id="padre">
+   
+</div>
+<input type="button" id="btn_agregar" value="+">
+</body>
+</html>
